@@ -197,14 +197,6 @@ section .portfolio-items .portfolio-item .portfolio-link {
 	transition:all ease 0.5s;
 }
 
-.copyright{
-	color:#565555;
-	font-size: 12px;
-	position: absolute;
-	left:50%;
-	bottom:10px;
-	transform: translateX(-50%);
-}
 .social{
 	position: fixed;
 	top:50%;
@@ -447,10 +439,7 @@ button:active{
 
 
 @media(max-width:750px){
-	section{
-		background-image:none;
-		background-color:#f7f7f7;
-	}
+
 
 	.toggle{
 		display: block;

@@ -14,7 +14,7 @@ body {
   background-color: rgba(0, 0, 0, 0.03);
   padding-top: 70px;
 }
-
+/* -------------nav bar used in all pages----------------- */
 nav {
 	display: flex;
 	justify-content: space-between;
