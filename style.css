@@ -251,9 +251,9 @@ footer p.footer-text {
 
 }
 .text-container p:nth-child(3){
-	font-family: myriad pro regular;
-	color: #403e3e;
-	font-size:30px;
+	font-family: calibri;
+	color: #1a1a1a;
+	font-size:22px;
 	line-height:30px;
 }
 
