@@ -1,22 +1,20 @@
-@charset "utf-8";
-/* CSS Document */
+body * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
 
-/*NAVIGATION menu */
-
-ul{
-	list-style:none;
+body {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding-top: 70px;
 }
-a{
-	text-decoration:none;
-}
-section{                    /* this takes up space in top left, so that the 'about me' section does not float up */
-	width:100%;
-	height:95vh;
-	background-size:cover;
-	background-repeat:no-repeat;
-	position: relative;
-}
-nav {                          /*push nav menu to other side */
+/* -------------nav bar used in all pages----------------- */
+nav {
 	display: flex;
 	justify-content: space-between;
 	align-items:center;
@@ -26,261 +24,183 @@ nav {                          /*push nav menu to other side */
 	padding:0px 5%;
 
 }
-nav ul{                         /* shifting navigation bar into position */
+nav ul{
 	display: flex;
 }
-
 .toggle{
 	display: none;
 }
 
-
 nav ul li a{
 	margin:30px;
-	font-family:sans-serif;
+	font-family:myriad pro regular;
 	color:#505050;
 	font-size: 15px;
 	font-weight:700;
 }
 
-
-
-/* BLOG PAGE */
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-a{
-  text-decoration: none;
-  color: #fff;
-
-}
-img{
-  width: 100%;
-
-}
-section{
-
-  text-align: center;
-}
-.container{
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-main{       /* this is the space around the images */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
- margin: 30px 15px 0px 15px
-}
-header{
-  width: 70%;
-  margin: 0 auto;
-}
-header h1{
-  margin: 0;
-  font-size: 50px;
-  font-weight: 500;
-}
-.singleBlog{      /* These are the box elements surrounding the blog posts */
-  position: relative;
-  max-height: 580px;
-  height: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 2px 10px #ccc;
-}
-
-}
- .blogContent{         /* This makes the info of blog lift upward */
-  position: absolute;
-  left: 0;
-  bottom: -45px;
-  width: 100%;
-  color: #fff;
-  padding: 10px 5px;
-}
-
-.blogContent h3{        /* these are elements of the subheadings such as 'HTML & CSS' or 'Technology' etc */
-  font-size: 20px;
-  font-weight: 500;
-  margin: 0;
-}
-.blogContent h3 span{
-  display: block;
-  font-size: 60%;
-  margin-top: 5px;
-  font-weight: 600;
-  color: rgba(52, 73, 94,1.0)
-}
-
-.blogContent a{
-  font-size: 14px;
-  font-weight: 500;
-}
-.blogContent .btn{
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  font-weight: 400;
-}
-
-
-@media (max-width:992px) {
-  main{
-    grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  }
-}
-@media (max-width:767px) {
-  main{
-    grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
-  }
-  header{
-    width: 95%;
-  }
-  .blogContent{
-    bottom: 0;
-  }
-}
-
-
-/* below here are mostly remnants of home page, but used to keep nav bar and linkedin/github icons in right spot */
-}
-@media(max-width:1000px){
-	*{
-		box-sizing: border-box;
-	}
-	.text-container{
-		top:46%;
-	}
-	.text-container button{
-		margin: 5px;
-	}
-	.about-container{
-		width:90%;
-		border-radius: 10px;
-	}
-	.about-container img{
-		height: 200px;
-	}
-	.about-text{
-		width: 400px;
-	}
-	.about-text p:nth-child(1){
-		font-size: 20px;
-	}
-	.about-text p:nth-child(2){
-		font-size: 10px;
-	}
-
-	.about-text p:nth-child(3),
-	.about-text p:nth-child(4){
-		font-size: 14px;
-	}
-
-	.box-container{
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	.contact-me{
-		height: 200px;
-	}
-
-	.contact-me button{
-		font-size: 14px;
-		height:35px;
-		width: 160px;
-	}
-}
-
-
-@media(max-width:750px){
-	section{
-		background-image:none;
-		background-color:#f7f7f7;
-	}
-
-	.toggle{
-		display: block;
-	}
-
-
-
-	nav ul{
-		margin: 0px;
-		padding: 0px;
-		background-color: #ebeef4;
-		flex-direction: column;
-		position: fixed;
-		left: 0;
-		top: 0;
-		width:100%;
-		height: 100vh;
-		box-sizing: border-box;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 1;
-		display: none;
-
-	}
-	nav ul li a{
-		font-family: sans-serif;
-		font-size: 1.4em;
-		text-transform: uppercase;
-		color:#5c5c5c;
-	}
-	nav ul li a:hover{
-		color:#121212;
-	}
-
-	.toggle:before{          /* This creates the burger menu when in phone view */
-		content: '\f0c9';
-		font-family: fontAwesome;
-		line-height: 30px;
-		z-index: 1;
-	}
-	.toggle.active:before{
-		content: '\f00d';
-		position: fixed;
-		right: 25px;
-		line-height: 0px;
-	}
-
-	nav.active ul{
-		display: flex !important;
-	}
-
-	footer p:nth-child(2){
-		width: 90%;
-	}
-
-}footer p{
-	font-family: calibri;
-}
-footer p:nth-child(1){
-	font-size: 30px;
+.active{
+	color:#2d2a2a;
 	font-weight:bold;
-	color:#191919;
-	line-height:10px;
 }
-footer p:nth-child(2){
-	font-size: 16px;
-	color:#7e7d7d;
-	width:600px;
+
+.boxed {
+  width: 100%;
+  padding: 0px 15px;
+  max-width: 1100px;
+  margin: 0px auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: inline-block;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.btn:hover {
+  background: #000;
+}
+h1 {
+  font-size: 45px;
+  font-weight: 600;
+}
+header {
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header .boxed {
+  height: 100%;
+}
+header ul.nav-bar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header ul.nav-bar li {
+  margin-right: 40px;
+}
+header ul.nav-bar li a {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  text-decoration: none;
+}
+header ul.nav-bar li a:hover,
+header ul.nav-bar li a.active {
+
+}
+
+
+h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: #3E3530;
+}
+
+
+h2 {
+	font-size: 2.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+ul, ol {
+}
+
+a {
+	text-decoration: none;
+	color: #3E3530;
+}
+
+a:hover {
+}
+
+img.alignleft {
+	float: left;
+	padding: 0px 20px 0px 0px;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Page */
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+	background: url(images/img03.jpg) repeat-y left top;
+	padding: 0px;
+}
+
+
+/* Content */
+
+#content {
+	float: left;
+	width: 676px;
+	padding: 0px 0px 0px 0px;
+}
+
+.post {
+	padding-top: 20px;
+	border-bottom: 1px solid #EAEAEA;
+}
+
+.post .title {
+	clear: both;
+	letter-spacing: -1px;
+	padding: 10px 10px 0px 40px;
+	font-size: 36px;
+}
+
+.post .title a {
+	color: #0A7A98;
+	border: none;
+}
+
+.post .meta {
+	height: 48px;
 	text-align: center;
+	margin-bottom: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
 }
-footer{
-	height:300px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	position: relative;
+
+
+.post .meta .posted {
+	padding: 0px 10px 0px 0px;
+	text-transform: lowercase;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: italic;
+	color: #415B62;
 }
+
+.post .entry {
+	padding: 0 45px 20px 40px;
+	padding-bottom: 20px;
+	text-align: justify;
+}
+
 .social-icons a{
 	width:40px;
 	height:40px;
@@ -309,6 +229,14 @@ footer{
 	transition:all ease 0.5s;
 }
 
+.copyright{
+	color:#565555;
+	font-size: 12px;
+	position: absolute;
+	left:50%;
+	bottom:10px;
+	transform: translateX(-50%);
+}
 .social{
 	position: fixed;
 	top:50%;
@@ -335,3 +263,4 @@ footer{
 .social i{
 	font-size:20px;
 	color:#2B2B2B;
+}
