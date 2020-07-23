@@ -299,10 +299,10 @@ section {
 }
 section#banner {
   min-height: calc(100vh - 70px);
-  height: 100%;
+  height: 600%;
   display: flex;
   align-items: center;
-  background-image: url("../images/test1.jpg");
+  background-image: url("../images/frame.jpg");
   background-size: cover;
   background-blend-mode: color;
   background-color: rgba(0, 0, 0, 0.7);
@@ -340,11 +340,11 @@ section .portfolio-items .portfolio-item {
   border: 1px solid #eee;
 }
 section .portfolio-items .portfolio-item .portfolio-image {
-  height: 400px;
+  height: 50px;
   width: 100%;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 section .portfolio-items .portfolio-item .portfolio-title {
   font-size: 20px;
@@ -420,15 +420,7 @@ section .portfolio-items .portfolio-item .portfolio-link {
 	color:#2B2B2B;
 }
 
-footer {
-  background: #fff;
-  border-top: 1px solid #eee;
-  padding: 20px 0px;
-}
-footer p.footer-text {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: 600;
+
 }
 
 .text-container p:nth-child(1){
@@ -445,12 +437,7 @@ footer p.footer-text {
 	font-size:60px;
 
 }
-.text-container p:nth-child(3){
-	font-family: calibri;
-	color: #1a1a1a;
-	font-size:22px;
-	line-height:30px;
-}
+
 
 .text-container p{
 	margin:45px 0px 25px;
@@ -562,13 +549,7 @@ button:active{
 	transition:all ease 0.5s;
 }
 
-.copyright{
-	color:#565555;
-	font-size: 12px;
-	position: absolute;
-	left:50%;
-	bottom:10px;
-	transform: translateX(-50%);
+
 }
 .social{
 	position: fixed;
